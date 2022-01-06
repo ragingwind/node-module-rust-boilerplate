@@ -1,0 +1,18 @@
+{
+  "name": "@rust-package-template/darwin-arm64",
+  "version": "0.0.0",
+  "os": [
+    "darwin"
+  ],
+  "cpu": [
+    "arm64"
+  ],
+  "main": "rust-package-template.darwin-arm64.node",
+  "files": [
+    "rust-package-template.darwin-arm64.node"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": "^12.20.0 || ^14.13.1 || >=16.0.0"
+  }
+}

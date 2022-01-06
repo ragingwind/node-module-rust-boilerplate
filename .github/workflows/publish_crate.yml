@@ -1,0 +1,5 @@
+name: publish-crate
+on:
+  push:
+    tags:
+      - v*

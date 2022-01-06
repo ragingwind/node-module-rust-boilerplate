@@ -1,0 +1,14 @@
+[build]
+
+rustflags = [
+  "-C",
+  "target-feature=+sse2",
+  "-Z",
+  "new-llvm-pass-manager=no",
+]
+
+[target.aarch64-apple-darwin]
+rustflags = [
+  "-Z",
+  "new-llvm-pass-manager=no",
+]

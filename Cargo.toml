@@ -1,0 +1,6 @@
+[workspace]
+
+members = [
+  "crates/node",
+  "crates/rust-package-template",
+]

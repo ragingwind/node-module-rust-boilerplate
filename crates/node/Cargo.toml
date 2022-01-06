@@ -1,0 +1,18 @@
+[package]
+edition = "2021"
+name = "node"
+version = "0.0.0"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+napi = "2"
+napi-derive = "2"
+rust-package-template = {path = "../rust-package-template"}
+
+[build-dependencies]
+napi-build = {version = "1"}
+
+[profile.release]
+lto = true

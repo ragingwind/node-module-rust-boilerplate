@@ -1,0 +1,38 @@
+{
+  "name": "@rust-package-template/core",
+  "version": "0.0.1",
+  "description": "Template project for node and rust package written in rust",
+  "type": "module",
+  "main": "./index.cjs",
+  "types": "./index.d.ts",
+  "script": {
+    "napi": "napi"
+  },
+  "files": [
+    "index.cjs",
+    "index.d.ts"
+  ],
+  "engines": {
+    "node": "^12.20.0 || ^14.13.1 || >=16.0.0"
+  },
+  "scripts": {
+    "build": "napi build --platform --release --cargo-name node --cargo-flags=\"-p node\" --js index.cjs",
+    "build:dev": "napi build --platform --cargo-name node --cargo-flags=\"-p node\" --js index.cjs",
+    "test": "npm run build:dev && node tests/test.js",
+    "prepublishOnly": "napi prepublish -p scripts/npm --tagstyle npm",
+    "version": "napi version -p scripts/npm",
+    "artifacts": "napi artifacts --dist scripts/npm"
+  },
+  "napi": {
+    "name": "rust-package-template",
+    "triples": {
+      "additional": [
+        "aarch64-apple-darwin"
+      ]
+    }
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@napi-rs/cli": "^2.3.0"
+  }
+}

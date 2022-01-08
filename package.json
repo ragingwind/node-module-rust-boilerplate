@@ -5,9 +5,6 @@
   "type": "module",
   "main": "./index.cjs",
   "types": "./index.d.ts",
-  "script": {
-    "napi": "napi"
-  },
   "files": [
     "index.cjs",
     "index.d.ts"
@@ -21,7 +18,10 @@
     "test": "npm run build:dev && node tests/test.js",
     "prepublishOnly": "napi prepublish -p scripts/npm --tagstyle npm",
     "version": "napi version -p scripts/npm",
-    "artifacts": "napi artifacts --dist scripts/npm"
+    "artifacts": "napi artifacts --dist scripts/npm",
+    "act": "zx scripts/act.js",
+    "bumpup": "echo hi",
+    "rename": ""
   },
   "napi": {
     "name": "rust-package-template",
@@ -33,6 +33,7 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "@napi-rs/cli": "^2.3.0"
+    "@napi-rs/cli": "^2.3.0",
+    "zx": "^4.2.0"
   }
 }

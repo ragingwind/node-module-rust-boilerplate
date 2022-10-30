@@ -1,7 +1,7 @@
 {
-  "name": "@rust-package-template/core",
+  "name": "node-module-rust-boilerplate",
   "version": "0.0.1",
-  "description": "Template project for node and rust package written in rust",
+  "description": "Node module boilerplate project written in Rust",
   "type": "module",
   "main": "./index.cjs",
   "types": "./index.d.ts",
